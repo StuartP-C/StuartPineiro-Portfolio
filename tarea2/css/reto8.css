@@ -1,0 +1,29 @@
+header {
+    background-color: rgb(128, 2, 2);
+}
+
+.titulo1 {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 60px;
+}
+
+.container-fluid1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+img {
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio del contenedor */
+    width: 100%; /* Hace que la imagen se ajuste al ancho completo del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+footer {
+    background-color: rgb(128, 2, 2);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto;
+}

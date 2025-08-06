@@ -1,0 +1,96 @@
+header {
+    background-color: rgb(128, 2, 2);
+}
+
+.titulo1 {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 60px;
+}
+
+.titulo2 {
+    font-size: 30px;
+    color: #000000;
+}
+
+.container-fluid1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container-fluid2 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    border-top: inset #8bffff 5px;
+    border-bottom: inset #8bffff 5px;
+    color: #000;
+    padding: 20px;
+    box-sizing: border-box;
+    min-height: 100vh; 
+}
+
+@media (min-width: 768px) {
+    .container-fluid2 {
+        flex-direction: row; 
+    }
+}
+
+.fondo1 {
+    background-image: url("/imagenes/reto1.png");
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    flex: 1;
+    min-height: 300px; 
+    width: 100%; 
+}
+
+@media (min-width: 768px) {
+    .fondo1 {
+        height: 100%; 
+        width: 50%; 
+    }
+}
+
+.container-fluid2 .text-center {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container-fluid2 .text-center {
+        text-align: left;
+        padding: 20px 40px;
+    }
+}
+
+.container-fluid2 button {
+    margin-top: 20px;
+    border: inset #8bffff 2px; 
+    color: #d2d4d7;
+    width: 100%;
+    max-width: 300px;
+    font-size: 20px;
+}
+
+@media (min-width: 768px) {
+    .container-fluid2 button {
+        font-size: 30px;
+        width: 300px;
+    }
+}
+
+.container-fluid3 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer {
+    background-color: rgb(128, 2, 2);
+}
