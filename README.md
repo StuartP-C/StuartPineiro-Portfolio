@@ -1,6 +1,8 @@
 # StuartPineiro-Portfolio
 Projects of mine/ I have worked on 
 
-enlace original al github del proyecto de pokemon:
+Original GitHub link to the Pokemon Web App:
 https://github.com/eacerdas/proyecto_desarrollo_web_pokemon
-fue subido por uno de mis companneros en el proyecto
+It was uploaded by one of my partners at this project.
+
+Log Inn Credentials:
