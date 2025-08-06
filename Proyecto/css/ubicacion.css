@@ -1,0 +1,17 @@
+.map-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px); /* Resta la altura del navbar fijo */
+    margin-top: 60px; /* Asegura que el mapa esté debajo del navbar */
+    padding: 0;
+}
+
+/* El iframe se ajusta para ocupar todo el contenedor */
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100%; /* Ocupa toda la altura */
+    border: 0; /* Sin bordes */
+}

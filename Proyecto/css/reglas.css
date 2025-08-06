@@ -1,0 +1,67 @@
+/* Extra Small devices (landscape phones, 576px and down)*/
+
+@media (max-width: 575px) {
+    .navbar-collapse {
+        padding-top: 40px;
+        background-color: rgba(176, 149, 27, 0.9); 
+    }
+
+    .nav-item .nav-link {
+        padding: 10px 15px; 
+    }
+
+    .redes-sociales a {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    footer {
+        position: sticky;
+        bottom: 0;
+        background-color: rgba(176, 149, 27, 0.9);
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and up)*/
+
+@media (min-width: 576px) {
+    .navbar-collapse {
+        padding-top: 10px;
+        background-color: rgba(176, 149, 27, 0.9); 
+    }
+
+    .nav-item .nav-link {
+        padding: 10px 15px; 
+    }
+
+    footer {
+        position: sticky;
+        bottom: 0;
+        background-color: rgba(176, 149, 27, 0.9);
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+
+    footer {
+        position: sticky;
+        bottom: 0;
+        background-color: rgba(176, 149, 27, 0.9);
+    }
+}
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+
+    footer {
+        position: sticky;
+        bottom: 0;
+        background-color: rgba(176, 149, 27, 0.9);
+    }
+}

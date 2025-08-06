@@ -1,0 +1,236 @@
+.titleUs {
+    font-size: 40px;
+}
+
+.titleUs2 {
+    font-size: 40px;
+    margin-bottom: -50px;
+}
+
+.trainerBox {
+    border: 2px solid rgba(176, 149, 28, 0.9); ;
+    background-color: #696666;
+}
+
+.forma2 {
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.forma {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+}
+
+/* propiedades de la caja del tabulador */
+
+.tab {
+    overflow: hidden;
+    border: 3px solid rgba(176, 149, 27, 0.9); 
+    background-color: #9b9393;
+}
+
+.textTrainer {
+    font-size: 30px;
+    color: rgb(176, 149, 27);  
+    text-shadow: solid 2px #000;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.tam1 {
+    font-size: 24px;
+}
+
+/* controla propiedades de los TABS */
+
+.tab button {
+    background-color: inherit;
+    float: center;
+    color: #000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+
+/* controla el color sobre los TABS */
+
+.tab button:hover {
+    background-color: rgba(176, 149, 27, 0.897);
+    color: #fff;
+}
+
+
+/* controla el color activo de los TABS */
+
+.tab button.active {
+    background-color: rgba(176, 149, 27, 0.897);
+    color: #fff;
+}
+
+
+/* controla el contenido de cada pestaña tab */
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 2px solid #ccc;
+    border-top: none;
+    background: #eee;
+}
+
+
+.tabcontent {
+    animation: efect1 1s;
+}
+
+@keyframes efect1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* activar el modal */
+
+#imgModal1 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#imgModal2 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#imgModal3 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#imgModal4 {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* opacidad al pasar el mouse sobre la foto */
+
+
+#imgModal1:hover {
+    opacity: 1;
+}
+
+#imgModal2:hover {
+    opacity: 1;
+}
+
+#imgModal3:hover {
+    opacity: 1;
+}
+
+#imgModal4:hover {
+    opacity: 1;
+}
+
+
+/* modal (fondo) */
+
+.modal {
+    display: none;
+    position: fixed;
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    /*width: 100%; 
+    height: 100%; */
+    overflow: auto;
+    /* habilitar el scroll */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* contenido modal (imagen) */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    margin-top: 170px;
+    /*width: 40%;*/
+    /*tamaño de la foto ancho*/
+    max-width: 700px;
+}
+
+
+/* título de la imagen modal - Igual ancho que la imagen */
+
+.caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+    height: 150px;
+}
+
+
+/* agregar animación CSS en el modo modal */
+
+.modal-content,
+.caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/*botón cerrar */
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: 35px;
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: #000;
+}
+
+.close:hover,
+.close:focus {
+    color: rgba(176, 149, 27, 0.897);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 100% de ancho de imagen en pantallas más pequeñas */
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+

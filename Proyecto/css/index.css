@@ -1,0 +1,100 @@
+body {
+    background-color: #5b5050f2;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.portada {
+    background-image: url(../img/header.jpg);
+    clip-path: polygon(0% 0%, 2% 25%, 98% 25%, 100% 0%);
+    height: calc(100vh);
+    margin-bottom: -85vh;
+    background-size: cover;
+    background-color: #bebebe;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    box-shadow: inset 0 0 0 1000px rgba(23, 23, 23, 0);
+}
+
+.portada h1{
+    padding-top: 55px;
+}
+
+.portada2 {
+    background-color: rgba(176, 149, 27, 0.897);
+    height: 60px;
+    clip-path: polygon(2% 0, 0 100%, 100% 100%, 98% 0);
+    box-shadow: inset 0 0 0 1000px rgba(23, 23, 23, 0);
+}
+
+.optmenu.active {
+    color: #fff;
+    background-color: rgb(121, 75, 14);
+    font-weight: bold;
+}
+
+.navbar {
+    padding-bottom: 20px;
+    letter-spacing: 5px;
+    clip-path: polygon(2% 100%, 0 0, 100% 0, 98% 100%);
+    color: rgba(176, 149, 27, 0.897);
+    font-size: 1rem;
+}
+
+a {
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.optmenu {
+    font-size: 1rem;
+    transition: all 1s solid;
+}
+
+.optmenu:hover {
+    color: #fff;
+    background-color:  rgb(121, 75, 14);
+    transition: all 1s solid;
+}
+
+.optmenu:active {
+    background-color:rgba(176, 149, 27, 0.897);;
+}
+
+.navbar-toggler {
+    background-color: rgba(176, 149, 27, 0.897);
+    border: 3px solid #fff;
+    margin-right: auto;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(176, 149, 27, 0.897);
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: #000;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler .navbar-toggler-icon:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.btnNext {
+    color: white;
+    background-color: rgba(176, 149, 27, 0.897);
+    border: none;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+    

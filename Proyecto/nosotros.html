@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ANATOMY MASTERS</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6df3345e67.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="faviconGym.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/reglas.css">
+    <link rel="stylesheet" href="css/nosotros.css">
+</head>
+
+<body>
+
+    <header class="portada">
+        <h1 class="display-2 text-center text-white">Anatomy Masters</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-lg fondo1 fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mx-auto mb-2 mb-md-0 text-center">
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link text-white optmenu" aria-current="page" href="inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link text-white optmenu active" aria-current="page" href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link text-white optmenu" aria-current="page" href="instalaciones.html">Instalaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link text-white optmenu" aria-current="page" href="disciplinas.html">Disciplinas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link text-white optmenu" aria-current="page" href="extras.html">Extras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link text-white optmenu" aria-current="page" href="ubicacion.html">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-scroll class="nav-link text-white optmenu" aria-current="page" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <br> <br> <br> <br>
+
+    <section class="wow  animate__animated animate__wobble animate__delay-800ms">
+        <h2 class="text-center text-white pb-5 titleUs">Nuestros Entrenadores</h2>
+        <div class="container-sm">
+            <div class="row">
+
+                <div class="col-sm-3 col-md-6 col-lg-3 trainerBox">
+                    <div class="text-center">
+                        <img id="imgModal1" src="img/trainer1.jpg" alt="Trainer Julio Arrieta" class="img-fluid forma2" style="max-width: 280px;">
+                        <!--ID modal-->
+                        <div id="modal1" class="modal">
+                            <!--boton de cierre del modal-->
+                            <div class="close">&times;</div>
+                            <!--contenido del modal-->
+                            <img class="modal-content" id="img01">
+                            <!--titulo del modal-->
+                            <div id="caption1" class="caption"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-center textTrainer pt-3">Julio Arrieta</h4>
+                    <hr>
+                    <p class="text-center text-gray">
+                        Entrenador graduado en Ciencias de la Actividad Física y el Deporte por la Universidad de Valencia. Su especialidad es el entrenamiento de fuerza adaptado a personas mayores, ayudándoles a mejorar su movilidad y calidad de vida.
+                    </p>
+                </div>
+
+                <div class="col-sm-3 col-md-6 col-lg-3 trainerBox">
+                    <div class="text-center">
+                        <img id="imgModal2" src="img/trainer2.jpg" alt="Trainer Mónica Guerra" class="img-fluid forma2" style="max-width: 280px;">
+                        <!--ID modal-->
+                        <div id="modal2" class="modal">
+                            <!--boton de cierre del modal-->
+                            <div class="close">&times;</div>
+                            <!--contenido del modal-->
+                            <img class="modal-content" id="img02">
+                            <!--titulo del modal-->
+                            <div id="caption2" class="caption"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-center textTrainer pt-3">Mónica Guerra</h4>
+                    <hr>
+                    <p class="text-center text-gray">
+                        Mónica está certificada internacionalmente en CrossFit Level 2 y destaca por su enfoque dinámico y motivador. Diseña entrenamientos de alta intensidad personalizados para deportistas que buscan superar sus límites.
+                    </p>
+                </div>
+    
+                <div class="col-sm-3 col-md-6 col-lg-3 trainerBox">
+                    <div class="text-center">
+                        <img id="imgModal3" src="img/trainer3.jpg" alt="Trainer Javier Solano" class="img-fluid forma" style="max-width: 280px;">
+                        <!--ID modal-->
+                        <div id="modal3" class="modal">
+                            <!--boton de cierre del modal-->
+                            <div class="close">&times;</div>
+                            <!--contenido del modal-->
+                            <img class="modal-content" id="img03">
+                            <!--titulo del modal-->
+                            <div id="caption3" class="caption"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-center textTrainer pt-3">Javier Solano</h4>
+                    <hr>
+                    <p class="text-center text-gray">
+                        Fisioterapeuta y entrenador personal certificado, con experiencia en recuperación funcional y prevención de lesiones deportivas. Su metodología combina ejercicios terapéuticos con fortalecimiento progresivo.
+                    </p>
+                </div>
+
+                <div class="col-sm-3 col-md-6 col-lg-3 trainerBox">
+                    <div class="text-center">
+                        <img id="imgModal4" src="img/trainer4.jpg" alt="Trainer Sabrina Ugalde" class="img-fluid forma" style="max-width: 280px;">
+                        <!--ID modal-->
+                        <div id="modal4" class="modal">
+                            <!--boton de cierre del modal-->
+                            <div class="close">&times;</div>
+                            <!--contenido del modal-->
+                            <img class="modal-content" id="img04">
+                            <!--titulo del modal-->
+                            <div id="caption4" class="caption"></div>
+                        </div>
+                    </div>
+                    <h4 class="text-center textTrainer pt-3">Sabrina Ugalde</h4>
+                    <hr>
+                    <p class="text-center text-gray">
+                        Experta en acondicionamiento físico para deportes de combate, con formación en boxeo y kickboxing. Diseña programas de resistencia y potencia para atletas que quieren optimizar su rendimiento en el ring.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid pt-5 nosotrosSec">
+        <h2 class="text-center text-white pb-5 titleUs2">Más sobre nosotros</h2>
+        <div class="pt-5"></div>
+        <div class="tab tam1 text-center">
+            <!-- funcion que recibe un controlador de eventos (event) y un ID que representa cada pestaña -->
+            <button class="tablinks" onclick="opciones(event, 'mision')">Misión</button>
+            <button class="tablinks" onclick="opciones(event, 'vision')">Visión</button>
+            <button class="tablinks" onclick="opciones(event, 'historia')">Historia</button>
+        </div>
+
+        <div id="historia" class="tabcontent">
+            <h3 class="text-center">ANATOMY MASTERS - HISTORIA</h3>
+            <p class="text-center">
+                Fundada en Miami, Florida por profesionales de fitness, ciencia deportiva y la vida nocturna característica de la zona, Anatomy redefine el fitness a través de un enfoque único e inclusivo.
+            </p>
+        </div>
+
+        <div id="mision" class="tabcontent">
+            <h3 class="text-center">ANATOMY MASTERS - MISIÓN</h3>
+            <p class="text-center ">
+                Crear comunidades íntimas de salud y bienestar donde las personas puedan sudar, mejorar y recuperarse, ofreciendo un enfoque integral que combine fitness, ciencia deportiva y recuperación.
+            </p>
+        </div>
+
+        <div id="vision" class="tabcontent">
+            <h3 class="text-center">ANATOMY MASTERS - VISIÓN</h3>
+            <p class="text-center ">
+                Revolucionar el fitness al combinar instalaciones de última generación, servicios dirigidos por expertos y un enfoque holístico del bienestar, empoderando a las personas para rendir al máximo en todos los aspectos de su vida.
+            </p>
+        </div>
+    </section>
+
+
+    <br><br>
+    <div class="d-flex justify-content-center">
+        <a class="text-center btnNext" href="instalaciones.html">Continuar explorando</a>
+    </div>
+    
+    <br> <br> 
+    
+
+    <footer class="portada2">
+        <h2 class="text-center text-white py-3 mb-0">Derechos Reservados</h2>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="js/nosotros.js "></script>
+
+    <script src="js/index.js"></script>
+    
+    <script src="js/wow.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
