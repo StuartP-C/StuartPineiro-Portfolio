@@ -6,5 +6,5 @@ https://github.com/eacerdas/proyecto_desarrollo_web_pokemon
 It was uploaded by one of my partners at this project.
 
 most log in credentials are
-user: cenfo
-password: 123
+- User: cenfo
+- Password: 123
