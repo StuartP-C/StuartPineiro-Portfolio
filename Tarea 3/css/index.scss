@@ -1,0 +1,643 @@
+/* Variables */
+$margin-padding: 0;
+$box-sizing: border-box;
+$scroll-behavior: smooth;
+
+$color-black: #000;
+$color-white: #fff;
+$color-gray: #8b8c8ecf;
+$color-light-gray: #ffffff94;
+$color-bg-banner: rgba(23, 23, 23, 0.662);
+$font-size-icon: 30px;
+$btn-size: 45px;
+$arrow-size: 50px;
+$arrow-hover-size: 60px;
+$btn-border-radius: 50%;
+$font-size-lg: 95px;
+$font-size-md: 45px;
+$font-size-sm: 28px;
+$font-size-xs: 20px;
+
+$shadow-main: 2px 2px 2px rgb(0, 0, 0);
+$shadow-light: 1px 1px 1px rgba(150, 150, 150, 1);
+$shadow-dark: 2px 2px 2px rgba(0, 0, 0, 0.8);
+
+$padding-left-right: 250px;
+
+/* Global styles */
+* {
+    margin: $margin-padding;
+    padding: $margin-padding;
+    box-sizing: $box-sizing;
+}
+
+body {
+    scroll-behavior: $scroll-behavior;
+}
+
+/* Section styles */
+.seccion2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.seccion {
+    background-image: url("../img/banner.jpg");
+    background-color: rgba($color-white, 0.46);
+    background-blend-mode: multiply;
+    box-shadow: inset 0 0 0 1000px $color-bg-banner;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: auto;
+    padding-bottom: 50px;
+
+    h1 {
+        padding-top: 260px;
+        font-size: $font-size-lg;
+        color: $color-white;
+        text-shadow: $shadow-main;
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 35px;
+        color: $color-white;
+        text-shadow: $shadow-main;
+        font-weight: normal;
+    }
+}
+
+.seccion1 {
+    background-color: $color-black;
+    height: auto;
+    padding-left: $padding-left-right;
+    padding-right: $padding-left-right;
+
+    h2 {
+        color: $color-white;
+        font-weight: bold;
+        font-size: $font-size-md;
+        text-shadow: $shadow-light;
+    }
+
+    h3 {
+        color: $color-white;
+        font-weight: bold;
+        font-size: $font-size-sm;
+        text-shadow: $shadow-light;
+    }
+}
+
+/* Header styles */
+header {
+    background-color: $color-black;
+}
+
+/* Navbar styles */
+.navbar-nav {
+    text-align: center;
+
+    .nav-item {
+        a {
+            font-size: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            color: $color-white;
+            transition: all 0.5s ease-out;
+
+            &:hover {
+                background-color: $color-light-gray;
+                color: $color-black;
+            }
+        }
+    }
+}
+
+/* Sección Parallax */
+.parallax-container {
+    position: relative;
+    height: 500px; /* Puedes ajustar esta altura */
+    background: url('../img/banner2.jpg') no-repeat center center;
+    background-attachment: fixed; /* Efecto parallax */
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.parallax-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurecer la imagen de fondo */
+    z-index: 1;
+}
+
+/* Map section styles */
+.seccion-mapa {
+    text-align: center;
+    background-color: $color-black;
+    padding: $margin-padding;
+
+    .titulo-mapa {
+        font-size: 40px;
+        font-weight: bold;
+        color: $color-white;
+        text-shadow: $shadow-light;
+        margin-bottom: 10px;
+    }
+
+    .mapa-ubicacion {
+        iframe {
+            width: 100%;
+            height: 400px;
+            border: $margin-padding;
+        }
+    }
+}
+
+/* Buttons - Standardized */
+.boton, .btn-explorar, .botonScrollTop, .arrowScroll {
+    background-color: $color-gray;
+    border: 2px solid $color-black;
+    color: $color-black;
+    text-align: center;
+    line-height: $btn-size;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+
+.btn-explorar {
+    margin-top: 50px;
+    width: 300px;
+    height: 80px;
+    font-size: 30px;
+    font-weight: bolder;
+    text-shadow: $shadow-light;
+    border-radius: $btn-border-radius;
+}
+
+.botonScrollTop {
+    position: fixed;
+    height: $btn-size;
+    width: $btn-size;
+    right: 30px;
+    bottom: 30px;
+    border-radius: $btn-border-radius;
+
+    i {
+        font-size: 20px;
+    }
+}
+
+.arrowScroll {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $arrow-size;
+    height: $arrow-size;
+    border-radius: $btn-border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-dark;
+
+    i {
+        color: $color-black;
+        font-size: 25px;
+    }
+
+    &:hover {
+        width: $arrow-hover-size;
+        height: $arrow-hover-size;
+
+        i {
+            transform: translateY(5px);
+        }
+    }
+}
+
+/* Botón de desplazamiento (visible solo en #explorar) */
+#explorar .arrowScroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $arrow-size;
+    height: $arrow-size;
+    background-color: $color-white;
+    border-radius: $btn-border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: $shadow-dark;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    i {
+        color: $color-black;
+        font-size: 25px;
+        transition: transform 0.2s;
+    }
+
+    &:hover {
+        width: $arrow-hover-size;
+        height: $arrow-hover-size;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+
+        i {
+            transform: translateY(5px);
+        }
+    }
+}
+
+/* Ocultar por defecto fuera de #explorar */
+.arrowScroll {
+    display: none;
+}
+
+/* Contact Section */
+#contacto {
+    background-color: $color-black;
+    background-size: cover;
+    padding: 20px;
+    
+    #contacto {
+        .row {
+            .col-12 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 2rem;
+    
+                // Animación Lottie
+                .animacion1, .animacion2 {
+                    width: 100%; // Asegura que la animación se adapte a las pantallas pequeñas
+                    max-width: 300px; // Limita el tamaño máximo en pantallas grandes
+                }
+    
+                // Iconos y texto
+                a {
+                    color: inherit;
+                    text-decoration: none;
+    
+                    i {
+                        font-size: 2rem; // Ajusta el tamaño de los íconos
+                    }
+    
+                    h5 {
+                        font-size: 1.2rem; // Ajusta el tamaño de los textos
+                    }
+                }
+            }
+        }
+      
+      .animacion1, .animacion2 {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .fa-whatsapp, .fa-instagram {
+        transition: transform 0.3s;
+      }
+      
+      .fa-whatsapp:hover {
+        transform: scale(1.1);
+        color: #25d366; /* Verde para WhatsApp */
+      }
+      
+      .fa-instagram:hover {
+        transform: scale(1.1);
+        color: #e1306c; /* Rosa para Instagram */
+      }
+      
+      .texto-animacion {
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+    .h2contacto {
+        color: $color-white !important;
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .fab {
+        font-size: $font-size-icon;
+        color: $color-white;
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .logoWhatsApp {
+        padding-top: 75px;
+        text-align: center;
+
+        i {
+            font-size: 60px;
+            color: $color-white;
+        }
+    }
+    
+    .text-light {
+        color: #fff !important;
+    }
+      
+
+    /* Animación Lottie */
+    .animacion1 {
+    width: 300px; // Tamaño ancho por defecto
+    height: 300px; // Tamaño alto por defecto
+    margin: 10px auto; // Centrado vertical y horizontal
+
+    // Estilos responsivos para tablets
+    @media (max-width: 768px) {
+        width: 120px; // Ancho para tablets
+        height: 120px; // Alto para tablets
+    }
+
+    // Estilos responsivos para móviles
+    @media (max-width: 480px) {
+        width: 100px; // Ancho para móviles
+        height: 100px; // Alto para móviles
+    }
+}
+
+    .animacion2 {
+    width: 300px; // Tamaño ancho por defecto
+    height: 300px; // Tamaño alto por defecto
+    margin: 10px auto; // Centrado vertical y horizontal
+
+    // Estilos responsivos para tablets
+    @media (max-width: 768px) {
+        width: 120px; // Ancho para tablets
+        height: 120px; // Alto para tablets
+    }
+
+    // Estilos responsivos para móviles
+    @media (max-width: 480px) {
+        width: 100px; // Ancho para móviles
+        height: 100px; // Alto para móviles
+    }
+}
+
+
+
+/* Estilos para la animación y texto */
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-animacion {
+    margin-top: 10px; /* Espacio entre la animación y el texto */
+    font-size: 18px;  /* Tamaño del texto */
+    color: $color-white; /* Color del texto */
+    font-weight: bold;  /* Opcional: para que el texto sea más visible */
+}
+
+/* Contenedor de WhatsApp */
+.logoWhatsApp {
+    margin: 20px 0;
+
+    i {
+        font-size: 60px; // Tamaño del ícono por defecto
+
+        // Estilos responsivos para tablets
+        @media (max-width: 768px) {
+            font-size: 50px; // Tamaño del ícono en tablets
+        }
+
+        // Estilos responsivos para móviles
+        @media (max-width: 480px) {
+            font-size: 40px; // Tamaño del ícono en móviles
+        }
+    }
+
+    h5 {
+        font-size: 18px; // Tamaño del texto por defecto
+
+        // Estilos responsivos para tablets
+        @media (max-width: 768px) {
+            font-size: 16px; // Tamaño del texto en tablets
+        }
+
+        // Estilos responsivos para móviles
+        @media (max-width: 480px) {
+            font-size: 14px; // Tamaño del texto en móviles
+        }
+    }
+}
+
+}
+
+/* Footer */
+footer {
+    background-color: $color-black;
+    padding: 20px 0;
+
+    p {
+        color: $color-white;
+        font-size: 18px;
+        font-weight: 500;
+        margin: $margin-padding;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+    .navbar-brand img {
+        width: 68px;
+    }
+
+    .nav-item a {
+        font-size: 17px;
+    }
+
+    .seccion1 {
+        padding-left: $margin-padding;
+        padding-right: $margin-padding;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+
+    .titulo-mapa {
+        font-size: 24px;
+    }
+
+    .mapa-ubicacion iframe {
+        height: 200px;
+    }
+
+    .arrowScroll {
+        bottom: 30px;
+        width: 40px;
+        height: 40px;
+
+        i {
+            font-size: 20px;
+        }
+
+        &:hover {
+            width: 50px;
+            height: 50px;
+
+            i {
+                transform: translateY(4px);
+            }
+        }
+    }
+
+    .botonScrollTop {
+        right: 13px;
+
+        #contacto {
+            padding: 10px;
+
+            .h2contacto {
+                font-size: 28px;
+            } 
+
+            .fab {
+                font-size: 25px;
+            }
+
+            .logoWhatsApp i {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-12 {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+}
+}
+
+@media (max-width: 480px) {
+    .navbar-brand img {
+        width: 68px;
+    }
+
+    .nav-item a {
+        font-size: 17px;
+    }
+
+    .seccion1 {
+        padding-left: $margin-padding;
+        padding-right: $margin-padding;
+    }
+
+    footer p {
+        font-size: 15px;
+    }
+
+    .titulo-mapa {
+        font-size: 24px;
+    }
+
+    .mapa-ubicacion iframe {
+        height: 200px;
+    }
+
+    .arrowScroll {
+        bottom: 30px;
+        width: 40px;
+        height: 40px;
+
+        i {
+            font-size: 20px;
+        }
+
+        &:hover {
+            width: 50px;
+            height: 50px;
+
+            i {
+                transform: translateY(4px);
+            }
+        }
+    }
+
+    .botonScrollTop {
+        right: 13px;
+
+        #contacto {
+            padding: 10px;
+
+            .h2contacto {
+                font-size: 28px;
+            }
+
+            .fab {
+                font-size: 25px;
+            }
+
+            .logoWhatsApp i {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .col-12 {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+}

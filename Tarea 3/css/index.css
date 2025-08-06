@@ -1,0 +1,533 @@
+@charset "UTF-8";
+/* Variables */
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* Section styles */
+.seccion2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.seccion2 .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.seccion2 .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.seccion {
+  background-image: url("../img/banner.jpg");
+  background-color: rgba(255, 255, 255, 0.46);
+  background-blend-mode: multiply;
+  box-shadow: inset 0 0 0 1000px rgba(23, 23, 23, 0.662);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: auto;
+  padding-bottom: 50px;
+}
+.seccion h1 {
+  padding-top: 260px;
+  font-size: 95px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  font-weight: bold;
+}
+.seccion h3 {
+  font-size: 35px;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  font-weight: normal;
+}
+
+.seccion1 {
+  background-color: #000;
+  height: auto;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+.seccion1 h2 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 45px;
+  text-shadow: 1px 1px 1px rgb(150, 150, 150);
+}
+.seccion1 h3 {
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  text-shadow: 1px 1px 1px rgb(150, 150, 150);
+}
+
+/* Header styles */
+header {
+  background-color: #000;
+}
+
+/* Navbar styles */
+.navbar-nav {
+  text-align: center;
+}
+.navbar-nav .nav-item a {
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s ease-out;
+}
+.navbar-nav .nav-item a:hover {
+  background-color: rgba(255, 255, 255, 0.5803921569);
+  color: #000;
+}
+
+/* Sección Parallax */
+.parallax-container {
+  position: relative;
+  height: 500px; /* Puedes ajustar esta altura */
+  background: url("../img/banner2.jpg") no-repeat center center;
+  background-attachment: fixed; /* Efecto parallax */
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+.parallax-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Oscurecer la imagen de fondo */
+  z-index: 1;
+}
+
+/* Map section styles */
+.seccion-mapa {
+  text-align: center;
+  background-color: #000;
+  padding: 0;
+}
+.seccion-mapa .titulo-mapa {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 1px rgb(150, 150, 150);
+  margin-bottom: 10px;
+}
+.seccion-mapa .mapa-ubicacion iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+}
+
+/* Buttons - Standardized */
+.boton, .btn-explorar, .botonScrollTop, .arrowScroll {
+  background-color: rgba(139, 140, 142, 0.8117647059);
+  border: 2px solid #000;
+  color: #000;
+  text-align: center;
+  line-height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.boton:hover, .btn-explorar:hover, .botonScrollTop:hover, .arrowScroll:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-explorar {
+  margin-top: 50px;
+  width: 300px;
+  height: 80px;
+  font-size: 30px;
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px rgb(150, 150, 150);
+  border-radius: 50%;
+}
+
+.botonScrollTop {
+  position: fixed;
+  height: 45px;
+  width: 45px;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
+}
+.botonScrollTop i {
+  font-size: 20px;
+}
+
+.arrowScroll {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+.arrowScroll i {
+  color: #000;
+  font-size: 25px;
+}
+.arrowScroll:hover {
+  width: 60px;
+  height: 60px;
+}
+.arrowScroll:hover i {
+  transform: translateY(5px);
+}
+
+/* Botón de desplazamiento (visible solo en #explorar) */
+#explorar .arrowScroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+#explorar .arrowScroll i {
+  color: #000;
+  font-size: 25px;
+  transition: transform 0.2s;
+}
+#explorar .arrowScroll:hover {
+  width: 60px;
+  height: 60px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+}
+#explorar .arrowScroll:hover i {
+  transform: translateY(5px);
+}
+
+/* Ocultar por defecto fuera de #explorar */
+.arrowScroll {
+  display: none;
+}
+
+/* Contact Section */
+#contacto {
+  background-color: #000;
+  background-size: cover;
+  padding: 20px;
+  /* Footer */
+  /* Responsive styles */
+}
+#contacto #contacto {
+  /* Animación Lottie */
+  /* Estilos para la animación y texto */
+  /* Contenedor de WhatsApp */
+}
+#contacto #contacto .row .col-12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#contacto #contacto .row .col-12 .animacion1, #contacto #contacto .row .col-12 .animacion2 {
+  width: 100%;
+  max-width: 300px;
+}
+#contacto #contacto .row .col-12 a {
+  color: inherit;
+  text-decoration: none;
+}
+#contacto #contacto .row .col-12 a i {
+  font-size: 2rem;
+}
+#contacto #contacto .row .col-12 a h5 {
+  font-size: 1.2rem;
+}
+#contacto #contacto .animacion1, #contacto #contacto .animacion2 {
+  max-width: 100%;
+  height: auto;
+}
+#contacto #contacto .fa-whatsapp, #contacto #contacto .fa-instagram {
+  transition: transform 0.3s;
+}
+#contacto #contacto .fa-whatsapp:hover {
+  transform: scale(1.1);
+  color: #25d366; /* Verde para WhatsApp */
+}
+#contacto #contacto .fa-instagram:hover {
+  transform: scale(1.1);
+  color: #e1306c; /* Rosa para Instagram */
+}
+#contacto #contacto .texto-animacion {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+#contacto #contacto .h2contacto {
+  color: #fff !important;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#contacto #contacto .fab {
+  font-size: 30px;
+  color: #fff;
+  transition: transform 0.2s;
+}
+#contacto #contacto .fab:hover {
+  transform: scale(1.1);
+}
+#contacto #contacto .logoWhatsApp {
+  padding-top: 75px;
+  text-align: center;
+}
+#contacto #contacto .logoWhatsApp i {
+  font-size: 60px;
+  color: #fff;
+}
+#contacto #contacto .text-light {
+  color: #fff !important;
+}
+#contacto #contacto .animacion1 {
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+}
+@media (max-width: 768px) {
+  #contacto #contacto .animacion1 {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 480px) {
+  #contacto #contacto .animacion1 {
+    width: 100px;
+    height: 100px;
+  }
+}
+#contacto #contacto .animacion2 {
+  width: 300px;
+  height: 300px;
+  margin: 10px auto;
+}
+@media (max-width: 768px) {
+  #contacto #contacto .animacion2 {
+    width: 120px;
+    height: 120px;
+  }
+}
+@media (max-width: 480px) {
+  #contacto #contacto .animacion2 {
+    width: 100px;
+    height: 100px;
+  }
+}
+#contacto #contacto .text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#contacto #contacto .texto-animacion {
+  margin-top: 10px; /* Espacio entre la animación y el texto */
+  font-size: 18px; /* Tamaño del texto */
+  color: #fff; /* Color del texto */
+  font-weight: bold; /* Opcional: para que el texto sea más visible */
+}
+#contacto #contacto .logoWhatsApp {
+  margin: 20px 0;
+}
+#contacto #contacto .logoWhatsApp i {
+  font-size: 60px;
+}
+@media (max-width: 768px) {
+  #contacto #contacto .logoWhatsApp i {
+    font-size: 50px;
+  }
+}
+@media (max-width: 480px) {
+  #contacto #contacto .logoWhatsApp i {
+    font-size: 40px;
+  }
+}
+#contacto #contacto .logoWhatsApp h5 {
+  font-size: 18px;
+}
+@media (max-width: 768px) {
+  #contacto #contacto .logoWhatsApp h5 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  #contacto #contacto .logoWhatsApp h5 {
+    font-size: 14px;
+  }
+}
+#contacto footer {
+  background-color: #000;
+  padding: 20px 0;
+}
+#contacto footer p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+@media (max-width: 480px) {
+  #contacto .navbar-brand img {
+    width: 68px;
+  }
+  #contacto .nav-item a {
+    font-size: 17px;
+  }
+  #contacto .seccion1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #contacto footer p {
+    font-size: 15px;
+  }
+  #contacto .titulo-mapa {
+    font-size: 24px;
+  }
+  #contacto .mapa-ubicacion iframe {
+    height: 200px;
+  }
+  #contacto .arrowScroll {
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  #contacto .arrowScroll i {
+    font-size: 20px;
+  }
+  #contacto .arrowScroll:hover {
+    width: 50px;
+    height: 50px;
+  }
+  #contacto .arrowScroll:hover i {
+    transform: translateY(4px);
+  }
+  #contacto .botonScrollTop {
+    right: 13px;
+  }
+  #contacto .botonScrollTop #contacto {
+    padding: 10px;
+  }
+  #contacto .botonScrollTop #contacto .h2contacto {
+    font-size: 28px;
+  }
+  #contacto .botonScrollTop #contacto .fab {
+    font-size: 25px;
+  }
+  #contacto .botonScrollTop #contacto .logoWhatsApp i {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  #contacto .row {
+    flex-direction: column;
+  }
+  #contacto .col-12 {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand img {
+    width: 68px;
+  }
+  .nav-item a {
+    font-size: 17px;
+  }
+  .seccion1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  footer p {
+    font-size: 15px;
+  }
+  .titulo-mapa {
+    font-size: 24px;
+  }
+  .mapa-ubicacion iframe {
+    height: 200px;
+  }
+  .arrowScroll {
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  .arrowScroll i {
+    font-size: 20px;
+  }
+  .arrowScroll:hover {
+    width: 50px;
+    height: 50px;
+  }
+  .arrowScroll:hover i {
+    transform: translateY(4px);
+  }
+  .botonScrollTop {
+    right: 13px;
+  }
+  .botonScrollTop #contacto {
+    padding: 10px;
+  }
+  .botonScrollTop #contacto .h2contacto {
+    font-size: 28px;
+  }
+  .botonScrollTop #contacto .fab {
+    font-size: 25px;
+  }
+  .botonScrollTop #contacto .logoWhatsApp i {
+    font-size: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .col-12 {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+}/*# sourceMappingURL=index.css.map */

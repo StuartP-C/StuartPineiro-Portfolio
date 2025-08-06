@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>FlyOver Las Vegas</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="faviconVegas.png">
+    <!-- Cargar libreria de iconos -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest"></script>
+    <script src="https://kit.fontawesome.com/fa2ce6a4c8.js" crossorigin="anonymous"></script>
+</head>
+<body id="inicio">
+    <header>
+        <!--Menu de navegacion responsivo-->
+       <nav class="navbar navbar-expand-lg navigation-wrap"> <!--fixed-top agregar para fijar el menu fixed-top -->
+        <!--Contenedor para centrar la informacion-->
+        <div class="container">
+            <!--Logotipo de la empresa-->
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" alt="logo Vegas" class="img-fluid">
+            </a>
+            <!--estructura del menu-->
+            <div class="collpase navbar-collapse" id="menu">
+                <!--Listado del menu-->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#slogan">Slogan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#explorar">Explorar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#ubicacion">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#agendar">Agendar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       </nav>
+    </header>
+
+    <section>
+        <div class="container-fluid seccion">
+            <div class="header-content text-center">
+                <h1>Experiencia FlyOver</h1>
+                <h3>Una aventura de vuelo increíble en Las Vegas.</h3>  
+                <button class="btn-explorar btn btn-outline-dark btn-lg" onclick="scrollToSection('#explorar')">Explorar</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="slogan" class="container-fluid seccion1 py-4">
+        <div class="container text-center">
+            <h2>Descubre una experiencia asombrosa en Flyover.</h2>
+            <br>
+            <h3> Nuestros viajes inmersivos te conectan con nuestro planeta desde una perspectiva completamente nueva. Sobrevuela lugares icónicos, sumérgete en historias auténticas y piérdete en una experiencia sin igual.</h3>
+            <h3>Sigue tu espíritu aventurero hasta Flyover, ubicado justo al lado de Hard Rock Cafe en Las Vegas Boulevard.</h3>
+        </div>
+    </section>
+  
+
+    <section id="explorar" class="container-fluid seccion2 py-4">
+        <!-- Flecha para desplazar a la siguiente sección -->
+        <div class="arrowScroll">
+            <a href="#parallax-banner">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+        <!-- Video de fondo -->
+        <div class="video-container">
+            <video src="video/video1.mp4" autoplay muted loop></video>
+        </div>
+    </section>
+
+    <!-- Sección Parallax -->
+<section id="parallax-banner" class="parallax-container">
+    <div class="parallax-content text-center text-light">
+        <h2 class="display-4">Explora FlyOver</h2>
+        <p class="lead">Una experiencia inmersiva en Las Vegas.</p>
+
+        <!-- Submenú -->
+        <h5 class="mt-4">Seleccione una opción:</h5>
+        <select class="formato1 cursor mt-3" id="subMenu" onchange="mostrarSeccion()">
+            <option value="">Seleccionar</option>
+            <option value="opcion1">Paisajes</option>
+            <option value="opcion2">Relatos</option>
+        </select>
+    </div>
+</section>
+
+<!-- Galería para Opción 1 -->
+<section id="seccion4" class="container2 py-5 d-none">
+    <div class="container">
+        <h2 class="text-center mb-4">Nuestros Paisajes</h2>
+        <div class="row tz-gallery">
+            <div class="col-md-6 text-center">
+                <a href="../img/img1.jpg" data-caption="Nuestro paseo inmersivo para que conozcas Las Vegas desde un punto de vista diferente a los demás.">
+                    <img src="../img/img1.jpg" class="img-fluid mb-3" alt="Imagen 1">
+                </a>
+                <p>Nuestro paseo inmersivo para que conozcas Las Vegas desde un punto de vista diferente a los demás.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="../img/img2.jpg" data-caption="Además, contamos con paisajes Nórdicos como Islandia para que experimentes una aventura por los cielos helados.">
+                    <img src="../img/img2.jpg" class="img-fluid mb-3" alt="Imagen 2">
+                </a>
+                <p>Además, contamos con paisajes Nórdicos como Islandia para que experimentes una aventura por los cielos helados.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Galería para Opción 2 -->
+<section id="seccion5" class="container2 py-5 d-none">
+    <div class="container">
+        <h2 class="text-center mb-4">Relatos</h2>
+        <div class="row tz-gallery">
+            <div class="col-md-6 text-center">
+                <a href="../img/img3.jpg" data-caption="La mujeres de la familia Jackson pasaron un tiempo agradable y divertido en FlyOver y recomiendan a más personas vivir esta experiencia.">
+                    <img src="../img/img3.jpg" class="img-fluid mb-3" alt="Imagen 3">
+                </a>
+                <p>La mujeres de la familia Jackson pasaron un tiempo agradable y divertido en FlyOver y recomiendan a más personas vivir esta experiencia.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <a href="../img/img4.jpg" data-caption="Estos dos hermanos y hermana se tomaron esta foto para recordar la divertida reunión familiar que tuvieron en FlyOver.">
+                    <img src="../img/img4.jpg" class="img-fluid mb-3" alt="Imagen 4">
+                </a>
+                <p>Estos dos hermanos y hermana se tomaron esta foto para recordar la divertida reunión familiar que tuvieron en FlyOver.</p>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+
+    
+    <section id="ubicacion" class="container-fluid seccion-mapa py-4">
+        <h2 class="titulo-mapa">Ubicación</h2>
+        <div class="mapa-ubicacion">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d206079.9666778129!2d-115.2344163!3d36.1908945!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20Nevada%2C%20EE.%20UU.!5e0!3m2!1ses!2scr!4v1731260498588!5m2!1ses!2scr" 
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+
+    <section id="agendar" class="container-fluid py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Agendar Servicio</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre completo" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="correo" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="8123-4567" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="fecha" class="form-label">Fecha de la Visita</label>
+                    <input type="date" class="form-control" id="fecha" required>
+                </div>
+                <div class="col-md-12">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="3" placeholder="Escriba cualquier detalle adicional de importancia aquí"></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn-explorar btn btn-outline-dark btn-lg">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section id="contacto" class="container-fluid py-5">
+        <h2 class="h2contacto text-center text-light pb-5">Contacto</h2>
+        <hr>
+        <div class="row d-flex justify-content-center align-items-center text-center flex-wrap">
+            <!-- Animación Lottie 1 -->
+            <div class="col-12 col-md-3 d-flex justify-content-center mb-4 mb-md-0">
+                <lottie-player 
+                  src="https://lottie.host/7978e6ac-25aa-430e-a024-ceac592aa38f/e0WmQnFQAk.json" 
+                  background="" 
+                  speed="1" 
+                  loop 
+                  autoplay 
+                  class="animacion1">
+                </lottie-player>
+            </div>
+            
+            <!-- Sección WhatsApp -->
+            <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center mb-4 mb-md-0">
+                <a href="https://www.whatsapp.com" target="_blank" class="text-decoration-none">
+                    <i class="fab fa-whatsapp fa-3x text-light"></i>
+                    <h5 class="text-light mt-2">WhatsApp</h5>
+                </a>
+            </div>
+            
+            <!-- Sección Instagram -->
+            <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center mb-4 mb-md-0">
+                <a href="https://www.instagram.com" target="_blank" class="text-decoration-none">
+                    <i class="fab fa-instagram fa-3x text-light"></i>
+                    <h5 class="text-light mt-2">Instagram</h5>
+                </a>
+            </div>
+            
+            <!-- Animación Lottie 2 -->
+            <div class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center">
+                <lottie-player 
+                  id="animacion" 
+                  src="https://lottie.host/86a7a48f-4a78-47e7-ab15-0b891bd3c1ab/n3EPNtOj2x.json" 
+                  background="" 
+                  speed="1" 
+                  loop 
+                  autoplay 
+                  class="animacion2">
+                </lottie-player>
+                <!-- Texto debajo de la animación -->
+                <p class="texto-animacion text-light mt-2">¡Presione la ruleta!</p>
+            </div>
+        </div>
+        <hr>
+        
+        <!-- Audio -->
+        <audio id="audio" src="audio/casino.mp3"></audio>
+    </section>
+    
+    
+      
+      
+      
+
+    <!-- BOTÓN SCROLLTOP -->
+    <a href="#inicio">
+        <div class="botonScrollTop">
+            <!--ícono flecha que apunta hacia arriba-->
+            <i class="fas fa-angle-up"></i>
+        </div>
+    </a>
+
+    <footer>
+        <div class="footer-content text-center">
+            <p>&copy; 2024 FlyOver Las Vegas.</p>
+            <p>Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+
+    <!-- JavaScript de BaguetteBox -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        baguetteBox.run('.tz-gallery');
+    });
+</script>
+
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>
