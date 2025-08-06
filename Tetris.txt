@@ -1,0 +1,129 @@
+
+# Define las piezas
+pieza_1 = ['#']
+pieza_2 = ['♠♠', '♠♠']
+pieza_3 = ['**', '*']
+pieza_4 =   ['        % %', ' % % %']
+pieza_5 = ['$ ', '$ ']
+pieza_6 = ['&      ', '&  &   ', '&  &  '] 
+# Verificar las dimensiones de las piezas
+for pieza in [pieza_1, pieza_2, pieza_3, pieza_4, pieza_5, pieza_6]:
+    longitud_fila = len(pieza[0])
+    if any(len(fila) != longitud_fila for fila in pieza):
+        print("Error: Las filas de las piezas deben tener la misma longitud.")
+        exit()
+
+# Inicializar el tablero
+tablero = [['0' for _ in range(10)] for _ in range(10)]
+
+# Función para imprimir el tablero
+def imprimir_tablero(tablero):
+    print("   A B C D E F G H I J ")
+    for i in range(len(tablero)):
+        print(f"{i + 1:2}", end=" ")
+        for j in range(len(tablero[i])):
+            print(tablero[i][j], end=" ")
+        print()
+
+# Función para ingresar una pieza al tablero
+def ingresar_pieza(tablero, pieza, fila, columna):
+    for i in range(len(pieza)):
+        for j in range(len(pieza[i])):
+            if pieza[i][j] != ' ':
+                if (fila + i < 0 or fila + i >= len(tablero) or
+                    columna + j < 0 or columna + j >= len(tablero[0])):
+                    print("¡Te saliste del tablero! Has perdido.")
+                    return False
+                if columna + j >= len(tablero[0]):
+                    print("¡Te saliste del tablero! Has perdido.")
+                    return False
+                if tablero[fila + i][columna + j] != '0':
+                    print("¡Hay una pieza en ese lugar! Has perdido.")
+                    return False
+                tablero[fila + i][columna + j] = pieza[i][j]
+    return True
+
+# Función para mostrar las piezas disponibles
+def mostrar_piezas_disponibles():
+    print("Piezas Disponibles:")
+    print("1:")
+    print("#")
+    print()
+    print("2:")
+    print("♠♠")
+    print("♠♠")
+    print()
+    print("3:")
+    print("**")
+    print("*")
+    print()
+    print("4:")
+    print("     % %")
+    print(" % % %")
+    print()
+    print("5:")
+    print("$ ")
+    print("$ ")
+    print()
+    print("6:")
+    print("          &")
+    print("      &  &")
+    print("   &  &")
+
+# Función para reiniciar el juego
+def reiniciar_juego():
+    # Imprimir el tablero inicial
+    imprimir_tablero(tablero)
+
+    # Mostrar las piezas disponibles
+    mostrar_piezas_disponibles()
+
+    # Solicitar al usuario la pieza y la posición
+    while True:
+        try:
+            opcion_pieza = int(input("Ingrese el número de pieza que desea colocar (0 para terminar): "))
+            if opcion_pieza == 0:
+                return False
+
+            fila = int(input("Ingrese la fila donde desea colocar la pieza (1-10): ")) - 1
+            columna = ord(input("Ingrese la columna donde desea colocar la pieza (A-J): ").upper()[0]) - ord('A')
+
+            if opcion_pieza < 1 or opcion_pieza > 6:
+                print("Por favor, ingrese un número de pieza válido (1-6).")
+                continue
+
+            if fila < 0 or fila > 9 or columna < 0 or columna > 9:
+                print("Por favor, ingrese una fila y columna válidas.")
+                continue
+
+            # Colocar la pieza seleccionada en el tablero
+            if opcion_pieza == 1:
+                pieza = pieza_1
+            elif opcion_pieza == 2:
+                pieza = pieza_2
+            elif opcion_pieza == 3:
+                pieza = pieza_3
+            elif opcion_pieza == 4:
+                pieza = pieza_4
+            elif opcion_pieza == 5:
+                pieza = pieza_5
+            else:
+                pieza = pieza_6
+
+            if not ingresar_pieza(tablero, pieza, fila, columna):
+                return False
+
+            # Imprimir el tablero después de ingresar la pieza
+            imprimir_tablero(tablero)
+
+        except ValueError:
+            print("Por favor, ingrese un valor numérico para el número de pieza y valores numéricos para la fila y la columna.")
+
+    return True
+
+# Jugar hasta que el usuario decida no volver a jugar
+while True:
+    if not reiniciar_juego():
+        respuesta = input("¿Quieres jugar de nuevo? (s/n): ").lower()
+        if respuesta != 's':
+            break
