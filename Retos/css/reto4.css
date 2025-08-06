@@ -1,0 +1,45 @@
+header {
+    background-color: rgb(128, 2, 2);
+}
+
+.titulo1 {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 60px;
+}
+
+.container-fluid1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.container-fluid2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+p{
+    font-size: 18px;
+}
+  
+header img {
+    width: 80px;
+}
+  
+input, select {
+    cursor: pointer;
+}
+  
+.error {
+    border: red solid 1px;
+}
+
+footer {
+    background-color: rgb(128, 2, 2);
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0; 
+    margin-top: auto; 
+}
+

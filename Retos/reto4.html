@@ -1,0 +1,68 @@
+<!-- Ajuste en el HTML -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reto 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reto4.css">
+    <link rel="icon" href="favicon.png">
+  </head>
+
+  <body>
+    <!-- Aquí va el resto de tu HTML, asegúrate de tener el tag <body> -->
+    <header class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-2 text-center text-md-start">
+          <a href="index.html" class="btn btn-dark btn-lg">Regresar</a>
+        </div>
+        <div class="col-12 col-md-8 text-center">
+          <h1 class="display-1 titulo1">Reto 4</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="container-fluid2 d-flex flex-column flex-md-row">
+      <div class="container">
+        <div class="row gx-5 gy-4 mt-4">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <section>
+              <div>
+                <p>Costa Rica ofrece a sus visitantes actividades para todos los gustos, desde turismo por la naturaleza y excursiones que cubren todos los aspectos de la vida local hasta un repertorio de comidas sabrosas que no te puedes perder. Dentro de las actividades turísticas más comunes está el visitar los maravillosos volcanes de Costa Rica</p>
+                <p>Observe algunos ejemplos de los volcanes que ofrece Costa Rica: </p>
+              </div>
+            </section>
+            <section>
+              <div>
+                <select class="form-select" id="volcan">
+                  <option value="" selected disabled>Seleccione un volcán</option>
+                  <option value="1">VOLCÁN ARENAL</option>
+                  <option value="2">VOLCÁN IRAZÚ</option>
+                  <option value="3">VOLCÁN POÁS</option>
+                  <option value="4">VOLCÁN RINCÓN DE LA VIEJA</option>
+                  <option value="5">VOLCÁN TURRIALBA</option>
+                </select>
+              </div>
+              <div class="mt-4">
+                <button class="btn btn-danger" id="btn-clean">Reiniciar</button>
+              </div>
+            </section>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6 mb-5">
+            <div class="d-flex justify-content-center mb-2" id="output-img"></div>
+            <div class="text-center fst-italic" id="output-txt"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="container-fluid1">
+      <h2 class="text-center titulo1">Derechos Reservados</h2>
+      <h2 class="text-center titulo1">Cenfotec 2024</h2>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/reto4.js"></script>
+  </body>
+</html>
